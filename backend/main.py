@@ -2,8 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.api.routes import router as api_router
-from backend.utils.config import settings
+from api.routes import router as api_router
+from utils.config import settings
 
 app = FastAPI(
     title="ToneShift API",
@@ -34,4 +34,4 @@ if __name__ == "__main__":
     # Standard local startup runner
     host = settings.host if settings else "127.0.0.1"
     port = settings.port if settings else 8000
-    uvicorn.run("backend.main:app", host=host, port=port, reload=True)
+    uvicorn.run("main:app", host=host, port=port, reload=True)
