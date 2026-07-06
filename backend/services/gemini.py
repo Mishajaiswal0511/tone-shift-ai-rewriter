@@ -5,8 +5,8 @@ from pydantic import BaseModel, Field
 from google import genai
 from google.genai import types
 
-from backend.utils.config import settings
-from backend.services.prompts import REWRITE_PROMPT, BACK_TRANSLATION_PROMPT, EVALUATION_PROMPT
+from utils.config import settings
+from services.prompts import REWRITE_PROMPT, BACK_TRANSLATION_PROMPT, EVALUATION_PROMPT
 
 # Pydantic schema for structured output of quality analysis
 class QualityAnalysis(BaseModel):
