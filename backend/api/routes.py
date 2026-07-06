@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel, Field, field_validator
 from typing import Dict, Any, List
 
-from backend.services.gemini import GeminiService
+from services.gemini import GeminiService
 
 router = APIRouter()
 
